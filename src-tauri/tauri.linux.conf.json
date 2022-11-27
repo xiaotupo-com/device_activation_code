@@ -6,10 +6,6 @@
     "distDir": "../dist",
     "withGlobalTauri": false
   },
-  "package": {
-    "productName": "device_activation_code",
-    "version": "1.0.1"
-  },
   "tauri": {
     "allowlist": {
       "all": true
@@ -18,6 +14,9 @@
       "active": true,
       "category": "DeveloperTool",
       "copyright": "小土坡",
+      "deb": {
+        "depends": []
+      },
       "externalBin": [],
       "icon": [
         "icons/32x32.png",
@@ -30,7 +29,7 @@
       "longDescription": "",
       "resources": [],
       "shortDescription": "",
-      "targets": "all",
+      "targets": "deb",
       "windows": {
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
@@ -42,15 +41,6 @@
     },
     "updater": {
       "active": false
-    },
-    "windows": [
-      {
-        "fullscreen": false,
-        "height": 600,
-        "resizable": false,
-        "title": "设备激活码小例子",
-        "width": 800
-      }
-    ]
+    }
   }
 }

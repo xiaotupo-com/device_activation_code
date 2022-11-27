@@ -20,7 +20,7 @@ async function derive_number_check() {
         error_message.value = "不能输入非数字类型...";
     } else {
         error_message.value = ""; // 清除错误信息
-
+        device_number.value = device_number.value.replace(/\s*/g,""); // 清除 device_number 中的所有空格
         if (device_number.value.length == 4) {
             result.value = await invoke("generate_activation_code", { deviceNumber: device_number.value });
         }
@@ -49,7 +49,6 @@ async function derive_number_check() {
         <div class="alert alert-success" role="alert">
             <p class="fs-1 m-0">激活代码为：<strong v-if="result">{{ result }}</strong></p>
         </div>
-
     </div>
 
 </template>

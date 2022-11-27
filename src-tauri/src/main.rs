@@ -3,6 +3,7 @@
     windows_subsystem = "windows"
 )]
 
+
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command]
 fn generate_activation_code(device_number: &str) -> String {
